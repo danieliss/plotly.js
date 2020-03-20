@@ -10,6 +10,35 @@ https://github.com/plotly/plotly.js/compare/vX.Y.Z...master
 where X.Y.Z is the semver of most recent plotly.js release.
 
 
+## [1.53.0] -- 2020-03-23
+
+### Added
+ - Introduce `rangebreaks` on date axes mainly thanks to [#4614]
+   with few API revisions [#4639, #4641, #4644, #4649, #4652, #4653, #4660, #4661]
+ - Introduce "x unified" and "y unified" `hovermode`s [#4620]
+ - Add "hovered data" mode to `spikesnap` [#4665]
+ - Add "full-json" export format to `Plotly.toImage` and `Plotly.dowloadImage`
+   i.e. for getting full version of the figure [#4593]
+ - Add `node.customdata` and `link.customdata` to `sankey` traces [#4621]
+ - Add `opacityscale` for `surface` traces
+   i.e. to apply different opacity values across the `surface` [#4480]
+
+### Changed
+ - Improve Contributing guidelines & add info about trace module architecture [#4624]
+ - Improve `contour` labels (add extra pad) and correct minus sign [#4540]
+ - Improve sizing text inside `pie` and `sunburst` (add extra pad) [#4519]
+ - Improve display of spikelines when `spikedistance` is set to -1 [#4637]
+ - Include all points at same coordinate in compare & unified hover modes [#4664]
+ - Harmonize start/end values of shared bins in `histogram` hover labels [#4662]
+
+### Fixed
+ - Fix `Plotly.downloadImage` for gl3d plots
+   i.e. to match transparencies with on-screen renders [#4566]
+ - Correct applied `opacity` of transparent `surface` traces [#4480, #4642]
+ - Handle breaks in `bar` traces (regression introduced in 1.50.0) [#4634]
+ - Handle breaks in `funnel` & `waterfall` [#4663]
+
+
 ## [1.52.3] -- 2020-03-02
 
 ## Fixed
